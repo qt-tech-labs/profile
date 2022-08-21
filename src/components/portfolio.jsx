@@ -3,17 +3,17 @@ import Section from './common/Section'
 import PortfolioCard from './portfolio/PortfolioCard'
 
 const Portfolio = () => {
-    const content = 
-        <div className='grid grid-cols-3 gap-4'>
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
-        </div>
+  const content =
+    <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+      <PortfolioCard />
+      <PortfolioCard />
+      <PortfolioCard />
+      <PortfolioCard />
+      <PortfolioCard />
+      <PortfolioCard />
+    </div>
   return (
-    <Section title="Portfolio" desc="What did I do" subContent={content}/>
+    <Section title="Portfolio" desc="What did I do" subContent={content} />
   )
 }
 

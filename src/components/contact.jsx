@@ -1,5 +1,4 @@
 import React from 'react'
-import ListItem from './common/ListItem'
 import Section from './common/Section'
 import ImgText from './common/ImgText'
 import { MdCall, MdEmail } from 'react-icons/md'
@@ -9,7 +8,7 @@ import Button from './common/Button'
 const Contact = () => {
     const content =
         <div className='flex flex-row items-start'>
-            <div className='flex flex-1 flex-col mr-5 items-end'>
+            <div className='hidden md:flex flex-1 flex-col mr-5 items-end'>
                 <ImgText icon={MdEmail} title="Email" desc="support@xxx.com" action={() => {
 
                 }} />

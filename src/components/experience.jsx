@@ -5,7 +5,7 @@ import { FaAward } from 'react-icons/fa'
 
 const Experience = () => {
     const content =
-        <div className='flex flex-col md:flex-row'>
+        <div className='flex flex-col md:flex-row w-full'>
             <div className='mb-2 md:mb-0 md:mr-4 hover:bg-transparent hover:border-primary border border-transparent bg-bg-primary-variant rounded-3xl flex flex-1 flex-col items-center'>
                 <span className='font-bold text-primary text-xl mt-5 md:mt-7'>Backend Development</span>
                 <div className='flex flex-row'>

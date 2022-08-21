@@ -1,13 +1,18 @@
 import React from 'react'
 import about2 from '../../assets/about2.jpg'
 import Button from '../common/Button'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
+
 
 const PortfolioCard = ({ title, image, github, demo }) => {
     return (
         <div className='flex flex-col p-3 border-2 border-transparent bg-bg-primary-variant hover:bg-transparent hover:border-bg-primary-variant hover:border-2 rounded-2xl'>
-            <img alt='Portfolio' src={image ?? about2}
-                className="rounded-2xl h-60 object-cover"
-            />
+            <LazyLoadImage className="rounded-2xl w-full h-60 object-cover"
+                alt="asdh"
+                effect="blur"
+                src={image ?? about2} />
             <span className='font-bold text-white my-3'>{title ?? "Deserunt laborum aliquip eiusmod laborum tempor eu laborum nostrud exercitation."}</span>
             <div className='flex flex-row'>
                 <Button action={() => {
