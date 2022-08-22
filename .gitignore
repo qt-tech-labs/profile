@@ -1,4 +1,6 @@
 node_modules
+.firebase
+.firebaserc
 .DS_STORE
 scripts/flow/*/.flowconfig
 .flowconfig
