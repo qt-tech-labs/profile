@@ -9,15 +9,15 @@ const Contact = () => {
     const content =
         <div className='flex flex-row items-start'>
             <div className='hidden md:flex flex-1 flex-col mr-5 items-end'>
-                <ImgText icon={MdEmail} title="Email" desc="support@xxx.com" action={() => {
+                <ImgText icon={MdEmail} title="Email" action={() => {
 
                 }} />
                 <ImgText icon={FaFacebookMessenger} title="Messenger" desc="Message to me" customClassName={"mt-5"} action={() => {
 
                 }} />
-                <ImgText icon={MdCall} title="Phone number" desc="034 369 0327" customClassName={"mt-5"} action={() => {
+                {/* <ImgText icon={MdCall} title="Phone number" desc="034 369 0327" customClassName={"mt-5"} action={() => {
 
-                }} />
+                }} /> */}
             </div>
             <div className='flex flex-col flex-1 ml-5'>
                 <input className='p-6 rounded-lg bg-transparent border-2 border-bg-primary-variant text-tx-secondary'

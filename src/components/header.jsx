@@ -1,12 +1,18 @@
 import React from 'react'
-import av from '../assets/av.png'
-import avatar from '../assets/avatar.png'
+import header from '../assets/header.png'
 import { AiFillGithub, AiFillLinkedin, AiOutlineGlobal } from 'react-icons/ai'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 const Header = () => {
+    const buttons =
+        <>
+            <a target="_blank" href='https://github.com/qt-tech-labs' className='rounded-full p-3'> <AiFillGithub /> </a>
+            <a target="_blank" href='https://linkedin.com/in/qt-tech' className='rounded-full p-3'> <AiFillLinkedin /> </a>
+            <a target="_blank" href='https://nqt-tech.web.app/' className='rounded-full p-3'> <AiOutlineGlobal /> </a>
+        </>
+
     return (
         <header id='home' className='md:px-40 px-26 lg:pt-30 pt-10 flex flex-col justify-center'>
             <h6 className='text-center font-medium'>Hello I'm</h6>
@@ -18,15 +24,13 @@ const Header = () => {
             </div>
             <div className='hidden md:flex flex-row justify-between mt-10'>
                 <div className='flex text-primary flex-col justify-end'>
-                    <a href='https://linkedin.com/in/qt-tech' className='rounded-full p-3'> <AiFillGithub /> </a>
-                    <a className='rounded-full p-3'> <AiFillLinkedin /> </a>
-                    <a className='rounded-full p-3'> <AiOutlineGlobal /> </a>
+                    {buttons}
                 </div>
                 <div className=' bg-gradient-to-b from-primary to-bg-primary pt-16 px-5 rounded-t-full'>
                     <LazyLoadImage
                         alt="dasf"
                         effect="blur"
-                        src={av} />
+                        src={header} />
                 </div>
                 <div className='flex flex-col justify-end pb-10'>
                     <span className='cursor-pointer text-primary rotate-90 bg-bg-primary'>Scroll down</span>
@@ -34,12 +38,10 @@ const Header = () => {
             </div>
             <div className='relative md:hidden flex flex-row justify-center mt-10'>
                 <div className='absolute flex text-white flex-row bottom-2'>
-                    <button className='rounded-full p-3'> <AiFillGithub /> </button>
-                    <button className='rounded-full p-3'> <AiFillLinkedin /> </button>
-                    <button className='rounded-full p-3'> <AiOutlineGlobal /> </button>
+                    {buttons}
                 </div>
                 <div className=' bg-gradient-to-b from-primary to-bg-primary pt-16 px-5 rounded-t-full'>
-                    <img alt='primary ' src={avatar} />
+                    <img alt='primary ' src={header} />
                 </div>
             </div>
         </header>

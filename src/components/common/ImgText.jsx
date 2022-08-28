@@ -6,7 +6,7 @@ const ImgText = ({ icon, title, desc, action, customClassName }) => {
             {React.createElement(icon, { size: 30, className: `my-3` })}
             <span className='text-center text-white font-bold text-md'>{title}</span>
             {desc &&
-                <span className='text-center text-tx-secondary font-bold'>{desc}</span>
+                <span className='text-center text-tx-secondary font-bold break-words whitespace-normal'>{desc}</span>
             }
 
             {action &&

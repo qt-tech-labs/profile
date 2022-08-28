@@ -1,5 +1,4 @@
 import React from 'react'
-import about2 from '../../assets/about2.jpg'
 import Button from '../common/Button'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
@@ -12,13 +11,14 @@ const PortfolioCard = ({ title, image, github, demo }) => {
             <LazyLoadImage className="rounded-2xl w-full h-60 object-cover"
                 alt="asdh"
                 effect="blur"
-                src={image ?? about2} />
+                src={image} />
             <span className='font-bold text-white my-3'>{title ?? "Deserunt laborum aliquip eiusmod laborum tempor eu laborum nostrud exercitation."}</span>
             <div className='flex flex-row'>
                 <Button action={() => {
                     // TODO
+                    window.open(github, '_blank', 'noopener,noreferrer');
                 }} title={"Github"} isPrimary={false} className="mr-2" />
-                <Button title={"Live Demo"} isPrimary={true} />
+                {/* <Button title={"Live Demo"} isPrimary={true} /> */}
             </div>
         </div>
     )
